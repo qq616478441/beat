@@ -1,0 +1,11 @@
+filebeat.prospectors:
+- type: log
+  enabled: true
+  paths:
+     - /home/ren/temp-logs/*.log
+  
+  scan_frequency: 2s
+output.kafka:
+  enabled: true
+  hosts: ["localhost:9092"]
+  topic: qqww
